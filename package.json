@@ -1,0 +1,11 @@
+{
+  "name": "1440-sandglass",
+  "version": "1.0.0",
+  "description": "'Memento Mori'",
+  "main": "sand.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matias Berrutti",
+  "license": "MIT"
+}
