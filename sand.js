@@ -26,7 +26,7 @@ const originalClock = [
   ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
 ]
 
-let currentClock = originalClock.map(element => element);
+let currentClock = JSON.parse(JSON.stringify(originalClock));
 
 function updateClock() {
   for (let i = 22; i > 0; i--) {
@@ -91,7 +91,7 @@ function tick() {
     process.stdout.write('\033c');
     console.log('One Minute')
     counter = 0;
-    currentClock = originalClock.map(element => element);
+    currentClock = JSON.parse(JSON.stringify(originalClock));
   }
 }
-setInterval(tick, 2000);
+setInterval(tick, 500);
