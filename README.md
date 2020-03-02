@@ -2,11 +2,6 @@
 
 > Minimalist clock to visualize the remaining minutes of the 1,440 ones we have in a day
 
-## About
-
-Based on the work of Robert McGuire https://github.com/robatron/1440-clock  
-This version has a sandglass with simple sand particle animations.
-
 ## Usage
 
 Navigate to: 
@@ -20,6 +15,11 @@ cd 1440-sandglass
 npm install
 npm run build
 ```
+
+## About
+
+Based on the work of Robert McGuire https://github.com/robatron/1440-clock  
+This version has a sandglass with simple sand particle animations.
 
 # License (MIT)
 
