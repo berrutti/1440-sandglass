@@ -1,4 +1,5 @@
 import { repeat } from './utils';
+import { getSandglassMatrix } from './sand';
 
 const MINUTE_SYM = {
   PAST: '.  ', // '⬛ ',
@@ -26,7 +27,7 @@ const getMinSecLeftString = () => {
   return `You have ${minutesLeft} minute${minutesLeft !== 1 ? 's' : ''} ${secondsLeft} second${secondsLeft !== 1 ? 's' : ''} remaining today`;
 };
 
-const printClockMatrix = (clockMatrix: string[][]) => {
+const getClockMatrix = (clockMatrix: string[][]) => {
   // Hour label padding to make room for minute labels
   let clockString = '    ';
 
@@ -54,10 +55,6 @@ const printClockMatrix = (clockMatrix: string[][]) => {
 
   return clockString;
 };
-
-const printSandglassMatrix = () => {
-  return '';
-}
 
 const generateClockMatrix = () => {
   const date = new Date();
@@ -97,8 +94,8 @@ const generateClockMatrix = () => {
 
 const updateClocks = () => {
   const clockMatrix = generateClockMatrix();
-  document.querySelector('#clock').innerHTML = printClockMatrix(clockMatrix);
-  document.querySelector('#sandglass').innerHTML = printSandglassMatrix();
+  document.querySelector('#clock').innerHTML = getClockMatrix(clockMatrix);
+  document.querySelector('#sandglass').innerHTML = getSandglassMatrix();
   document.querySelector('#timeleft').innerHTML = getMinSecLeftString();
 };
 
