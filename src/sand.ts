@@ -66,7 +66,7 @@ function cleanClock() {
 }
 
 function drawClock() {
-  currentClock.forEach(row => {
+  currentClock.forEach((row: string[]) => {
     let rowString = '';
     row.forEach(cell => {
       if (cell === '-') {
@@ -82,13 +82,11 @@ function drawClock() {
 let counter = 0;
 
 function tick() {
-  process.stdout.write('\033c');
   updateClock();
   cleanClock();
   drawClock();
   counter++;
   if (counter == 120) {
-    process.stdout.write('\033c');
     console.log('One Minute')
     counter = 0;
     currentClock = JSON.parse(JSON.stringify(originalClock));

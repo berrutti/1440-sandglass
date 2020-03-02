@@ -2,10 +2,16 @@
   "name": "1440-sandglass",
   "version": "1.0.0",
   "description": "'Memento Mori'",
-  "main": "sand.js",
+  "private": true,
   "scripts": {
-    "start": "node sand.js"
+    "build": "webpack"
   },
   "author": "Matias Berrutti",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
 }

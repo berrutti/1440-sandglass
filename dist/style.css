@@ -1,0 +1,26 @@
+body {
+  background-color: black;
+  color: lightgray;
+  font-family: 'Lucida Console', 'Courier', monospace;
+  margin: auto;
+  max-width: 1500;
+  min-width: 1500px;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.styledpre {
+  display: inline-flex;
+}
