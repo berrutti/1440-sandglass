@@ -1,17 +1,12 @@
 body {
   background-color: black;
   color: lightgray;
-  font-family: 'Lucida Console', 'Courier', monospace;
+  font-family: monospace;
   margin: auto;
-  max-width: 1500;
-  min-width: 1500px;
 }
 
-a {
+a, a:visited {
   text-decoration: underline;
-}
-
-a:visited {
   color: lightgray;
 }
 
