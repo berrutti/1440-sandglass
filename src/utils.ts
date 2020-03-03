@@ -1,17 +1,23 @@
-export function repeat(strToRepeat: string, count: number) {
-  count = Math.floor(count);
-  if (strToRepeat.length == 0 || count == 0)
-    return '';
+export const UPDATE_INTERVAL = 500;
+export const HOURS_IN_DAY = 24;
+export const MINS_IN_HOUR = 60;
 
-  if (strToRepeat.length * count >= 1 << 28)
-    throw new RangeError('repeat count must not overflow maximum string size');
-
-  var maxCount = strToRepeat.length * count;
-  count = Math.floor(Math.log(count) / Math.log(2));
-  while (count) {
-    strToRepeat += strToRepeat;
-    count--;
-  }
-  strToRepeat += strToRepeat.substring(0, maxCount - strToRepeat.length);
-  return strToRepeat;
+export const MinuteSymbols = {
+  Past: '.  ',
+  Present: ['˺  ', '˻  '],
+  Future: '#  ',
 }
+
+export const zeroPad = (targetNum: number): string => {
+  const numberString = targetNum.toString();
+  return (targetNum < 10) ? '0' + numberString : numberString;
+}
+
+export const getMinutesUntilMidnight = (now: Date): number => {
+  let midnight = new Date().setHours(24, 0, 0, 0);
+  return Math.floor((midnight - now.getTime()) / 6e4);
+}
+
+export const getHeaderString = (secondsLeft: number, minutesLeft: number): string => {
+  return `You have ${minutesLeft} minute${minutesLeft !== 1 ? 's' : ''} ${secondsLeft} second${secondsLeft !== 1 ? 's' : ''} remaining today`;
+};

@@ -4,7 +4,8 @@
   "description": "'Memento Mori'",
   "private": true,
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack -d --watch"
   },
   "author": "Matias Berrutti",
   "license": "MIT",
