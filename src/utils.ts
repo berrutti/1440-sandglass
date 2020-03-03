@@ -19,5 +19,5 @@ export const getMinutesUntilMidnight = (now: Date): number => {
 }
 
 export const getHeaderString = (secondsLeft: number, minutesLeft: number): string => {
-  return `You have ${minutesLeft} minute${minutesLeft !== 1 ? 's' : ''} ${secondsLeft} second${secondsLeft !== 1 ? 's' : ''} remaining today`;
+  return `You have ${minutesLeft} minute${minutesLeft !== 1 ? 's' : ''} and ${secondsLeft} second${secondsLeft !== 1 ? 's' : ''} remaining today`;
 };
